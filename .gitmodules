@@ -1,0 +1,3 @@
+[submodule "fuckCPlusPlus"]
+	path = fuckCPlusPlus
+	url = https://github.com/bullsky/fuckCPlusPlus
