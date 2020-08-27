@@ -25,7 +25,10 @@ raft算法包含leader选举，日志复制，存储快照
    2. 给自己投票
 3. candidate向其他节点发送投票请求，如果收到过半节点的投票，则成为leader
    1. 如果没有选出leader，candidate重新进入candidate状态，开启新的一轮选举
-4. leader周期性向其他节点发送心跳包以维持权威
+4. follwer的投票逻辑
+   1. 之前没投过票
+   2. candidate的日志不能比自己旧
+5. leader周期性向其他节点发送心跳包以维持权威
 ![raft状态转移图](raft-状态转移.png)
 
 **重置选举时钟**
